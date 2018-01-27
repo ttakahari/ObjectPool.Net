@@ -1,27 +1,32 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace ObjectPools
+namespace ObjectPool.Net
 {
-    public class AutomaticReturnObjectPoolClient<T>
+    public class SimpleObjectPoolClient<T>
     {
         private readonly ConcurrentQueue<T> _queue;
         private readonly Func<T> _valueFactory;
 
-        public AutomaticReturnObjectPoolClient(Func<T> valueFactory)
+        public SimpleObjectPoolClient(Func<T> valueFactory)
         {
             _queue        = new ConcurrentQueue<T>();
             _valueFactory = valueFactory ?? throw new ArgumentNullException(nameof(valueFactory));
         }
 
-        public AutomaticReturnPoolingObject<T> Get()
+        public T Get()
         {
             if (!_queue.TryDequeue(out var value))
             {
                 value = _valueFactory.Invoke();
             }
 
-            return new AutomaticReturnPoolingObject<T>(value, v => _queue.Enqueue(v));
+            return value;
+        }
+
+        public void Set(T value)
+        {
+            _queue.Enqueue(value);
         }
     }
 }

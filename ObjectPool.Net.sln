@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{023757D9-8A8D-42BF-9345-69C8FD6CA59A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectPools", "src\ObjectPools\ObjectPools.csproj", "{C9A9D3EB-AA54-4692-8F00-91EC7358601D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectPool.Net", "src\ObjectPool.Net\ObjectPool.Net.csproj", "{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C9A9D3EB-AA54-4692-8F00-91EC7358601D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9A9D3EB-AA54-4692-8F00-91EC7358601D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9A9D3EB-AA54-4692-8F00-91EC7358601D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9A9D3EB-AA54-4692-8F00-91EC7358601D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C9A9D3EB-AA54-4692-8F00-91EC7358601D} = {023757D9-8A8D-42BF-9345-69C8FD6CA59A}
+		{FD3CFFDA-80AD-4A37-AEE5-D0A14254C9BB} = {023757D9-8A8D-42BF-9345-69C8FD6CA59A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {96E153B2-8947-421F-9CDD-345E9D9EE587}

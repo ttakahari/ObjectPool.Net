@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Linq;
 
-namespace ObjectPools
+namespace ObjectPool.Net
 {
     public class FixedSizeObjectPoolClient<T>
     {

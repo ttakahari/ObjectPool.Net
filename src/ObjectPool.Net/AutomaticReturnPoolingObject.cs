@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectPools
+namespace ObjectPool.Net
 {
     public class AutomaticReturnPoolingObject<T> : IDisposable
     {

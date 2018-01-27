@@ -3,14 +3,14 @@ using System.Collections.Concurrent;
 
 namespace ObjectPool.Net
 {
-    public class SimpleObjectPoolClient<T>
+    public class ObjectPoolClient<T>
     {
         private readonly ConcurrentQueue<T> _queue;
         private readonly Func<T> _valueFactory;
 
         public int PoolCount => _queue.Count;
 
-        public SimpleObjectPoolClient(Func<T> valueFactory)
+        public ObjectPoolClient(Func<T> valueFactory)
         {
             _queue        = new ConcurrentQueue<T>();
             _valueFactory = valueFactory ?? throw new ArgumentNullException(nameof(valueFactory));

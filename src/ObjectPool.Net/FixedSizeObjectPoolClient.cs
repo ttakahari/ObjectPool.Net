@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Linq;
 
 namespace ObjectPool.Net
 {
@@ -55,6 +54,11 @@ namespace ObjectPool.Net
             {
                 DisposedCount++;
             }
+        }
+
+        public void Clear()
+        {
+            while (_queue.TryDequeue(out var _)) { }
         }
     }
 }

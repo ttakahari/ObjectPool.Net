@@ -8,6 +8,8 @@ namespace ObjectPool.Net
         private readonly ConcurrentQueue<T> _queue;
         private readonly Func<T> _valueFactory;
 
+        public int PoolCount => _queue.Count;
+
         public SimpleObjectPoolClient(Func<T> valueFactory)
         {
             _queue        = new ConcurrentQueue<T>();
@@ -27,6 +29,11 @@ namespace ObjectPool.Net
         public void Set(T value)
         {
             _queue.Enqueue(value);
+        }
+
+        public void Clear()
+        {
+            while (_queue.TryDequeue(out var _)) { }
         }
     }
 }

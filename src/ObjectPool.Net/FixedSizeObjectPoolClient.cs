@@ -35,8 +35,6 @@ namespace ObjectPool.Net
                 {
                     value = _valueFactory.Invoke();
 
-                    PoolCount++;
-
                     break;
                 }
             }
@@ -49,6 +47,8 @@ namespace ObjectPool.Net
             if (PoolCount < _capacity)
             {
                 _queue.Enqueue(value);
+
+                PoolCount++;
             }
             else
             {
